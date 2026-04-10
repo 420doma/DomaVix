@@ -2,6 +2,11 @@
 
 Questa guida ti spiega come configurare il deploy automatico su **BeamUp** sfruttando la GitHub Action ufficiale di Stremio.
 
+> [!WARNING]
+> **SE HAI FATTO UN FORK DI QUESTO REPOSITORY:**
+> GitHub disabilita le Actions per impostazione predefinita per motivi di sicurezza. 
+> Prima di fare qualsiasi cosa, clicca sulla scheda **"Actions"** in alto e premi il pulsante verde **"I understand my workflows, go ahead and enable them"** (Abilita i workflow). Se non lo fai, i metodi qui sotto non funzioneranno!
+
 ## 🛠️ Configurazione Iniziale
 
 ### 1. Generazione delle Chiavi SSH (Importante)
@@ -14,7 +19,9 @@ Ho creato un generatore automatico per te:
 3.  Clicca sul pulsante grigio **"Run workflow"** e poi su **"Run workflow"** (verde).
 4.  Attendi qualche secondo che l'azione finisca (cerchio verde).
 5.  Clicca sul nome dell'azione appena terminata e apri lo step **"📋 COPIA LE TUE CHIAVI"**.
-6.  Troverai sia la **Chiave Pubblica** che la **Privata** pronte da copiare!
+6.  Troverai due blocchi:
+    -   **Chiave PUBBLICA**: Copiala e incollala nel tuo **Profilo GitHub** (**Settings > SSH and GPG keys > New SSH key**).
+    -   **Chiave PRIVATA**: Copiala e incollala nei **Secret del Repository** (**Settings > Secrets > Actions > New repository secret**) chiamandolo `SSH_PRIVATE_KEY`.
 
 #### Metodo B: Da Terminale (Se hai un PC/Raspberry) 💻
 1.  **Genera la chiave**:
@@ -33,8 +40,8 @@ Ho creato un generatore automatico per te:
 Vai sul tuo repository GitHub dell'addon -> **Settings > Secrets and variables > Actions** e aggiungi questi tre "Repository secrets":
 
 1.  **`SSH_PRIVATE_KEY`**: Copia e incolla l'intero contenuto della tua **chiave privata** (il file senza `.pub`, es. `cat ~/.ssh/id_ed25519`). Deve includere `-----BEGIN OPENSSH PRIVATE KEY-----` e la fine.
-2.  **`USERNAME_GITHUB`**: Inserisci il tuo nome utente GitHub (es. `qwertyuiop8899`).
-3.  **`PROJECT_NAME`**: Scegli un nome per il tuo addon (es. `TUO_USERNAME`). Questo determinerà l'URL finale, quindi mettilo UNIVOCO: `https://TUO_PROGETTO.baby-beamup.club/manifest.json`.
+2.  **`USERNAME_GITHUB`**: Inserisci il tuo nome utente GitHub (es. `TUOUSER`).
+3.  **`PROJECT_NAME`**: Scegli un nome per il tuo addon (es. `TUO_USERNAME`). RICORDALO!!! Questo determinerà l'URL finale, quindi mettilo UNIVOCO: `https://TUO_PROGETTO.baby-beamup.club/manifest.json`.
 
 ---
 
