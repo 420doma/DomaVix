@@ -14,7 +14,7 @@ const manifest = {
     logo: 'https://i.imgur.com/xlR706F.png',
     background: 'https://4kwallpapers.com/images/wallpapers/black-and-white-2560x1440-21293.jpg',
     resources: ['stream'],
-    types: ['movie', 'series', 'anime'],
+    types: ['Film', 'Serie TV', 'Anime'],
     idPrefixes: ['tmdb:', 'tt', 'kitsu:'],
     catalogs: []
 };
