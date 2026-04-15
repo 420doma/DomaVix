@@ -9,12 +9,12 @@ import { generateLandingPage } from './landing';
 const manifest = {
     id: 'org.selfvix.simple',
     version: '1.1.0',
-    name: 'SelfVix🤌',
-    description: 'Self VixSrc and VixCloud',
-    logo: 'https://icv.stremio.dpdns.org/prisonmike.png',
-    background: 'https://blog.stremio.com/wp-content/uploads/2022/08/shino-1024x632.png',
+    name: ' | DomaVix | ',
+    description: 'VixSrc e VixCloud',
+    logo: 'https://i.imgur.com/xlR706F.png',
+    background: 'https://4kwallpapers.com/images/wallpapers/black-and-white-2560x1440-21293.jpg',
     resources: ['stream'],
-    types: ['movie', 'series', 'anime'],
+    types: [' ', ' ', ' '],
     idPrefixes: ['tmdb:', 'tt', 'kitsu:'],
     catalogs: []
 };
